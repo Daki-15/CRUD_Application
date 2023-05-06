@@ -1,11 +1,25 @@
+from tkinter import *
+
 def create():
-    print("CREATE")
+    new_window = Toplevel()
+    new_window.geometry("400x200")
+    new_window.title("Create")
+    Label(new_window, text="This is a new window for Create operation").pack(padx=20, pady=20)
 
 def read():
-    print("READ")
+    new_window = Toplevel()
+    new_window.geometry("400x200")
+    new_window.title("Read")
+    Label(new_window, text="This is a new window for Read operation").pack(padx=20, pady=20)
 
 def update():
-    print("UPDATE")
+    new_window = Toplevel()
+    new_window.geometry("400x200")
+    new_window.title("Update")
+    Label(new_window, text="This is a new window for Update operation").pack(padx=20, pady=20)
 
 def delete():
-    print("DELETE")
+    new_window = Toplevel()
+    new_window.geometry("400x200")
+    new_window.title("Delete")
+    Label(new_window, text="This is a new window for Delete operation").pack(padx=20, pady=20)
