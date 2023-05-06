@@ -8,7 +8,7 @@ def form_design(window):
 
 def labels_design(window):
     Label(window, text="Hello, this is a simple application that performs\n CRUD(Create, Read, Update, Delete) operations",
-           bg="#0B314B", fg="#F4F7F9", anchor="n", font=("Batang", 14)).grid(row=0, column=0, padx=50, pady=50)
+           bg="#0B314B", fg="#F4F7F9", anchor="n", font=("Batang", 15)).grid(row=0, column=0, padx=50, pady=50)
     
 def buttons_design(window):
     Button(window, text="Create", bg="#186031", fg="#F4F7F9", 

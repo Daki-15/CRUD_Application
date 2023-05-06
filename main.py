@@ -1,5 +1,5 @@
 from tkinter import *
-from design import form_design, labels_design, buttons_design
+from design_main_form import form_design, labels_design, buttons_design
 
 def main():
     window = Tk()
