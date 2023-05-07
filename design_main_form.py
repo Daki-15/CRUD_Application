@@ -1,5 +1,5 @@
 from tkinter import *
-from commands import create, read, update, delete
+from main_commands import create, read, update, delete
 
 def form_design(window):
     window.geometry("550x400")

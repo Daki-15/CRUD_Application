@@ -1,4 +1,5 @@
 from tkinter import *
+from crud_commands import submit, search, update, delete
 
 def create_form_design():
     new_window = Toplevel()
@@ -20,7 +21,8 @@ def create_form_design():
           bg="#0B314B", fg="#F4F7F9", font=("Batang", 13)).grid(row=3, column=0, padx=5, pady=20)
     Entry(new_window, bd=2, font=("Batang", 13)).grid(row = 3, column=1)
     # Button to create/adding data
-    Button(new_window, text="Submit", bg="#0D5F58", fg="#FEFEFE", font=("Batang", 13), width=10).grid(row=4, column=1, padx=5, pady=20)
+    Button(new_window, text="Submit", bg="#0D5F58", fg="#FEFEFE", 
+           font=("Batang", 13), width=10, command=submit).grid(row=4, column=1, padx=5, pady=20)
 
 def read_form_design():
     new_window = Toplevel()
@@ -43,7 +45,8 @@ def update_form_design():
           bg="#0B314B", fg="#F4F7F9", font=("Batang", 13)).grid(row=1, column=0, padx=5, pady=20)
     Entry(new_window, bd=2, font=("Batang", 13)).grid(row = 1, column=1)
     # Search button
-    Button(new_window, text="Search", font=("Batang", 13), bg="#166069", fg="#FEFEFE").grid(row=1, column=3, padx=5, pady=20)
+    Button(new_window, text="Search", font=("Batang", 13), bg="#166069", 
+           fg="#FEFEFE", command=search).grid(row=1, column=3, padx=5, pady=20)
     # Label and entry widget where the user can input their name
     Label(new_window, text="Name:", anchor="w", 
           bg="#0B314B", fg="#F4F7F9", font=("Batang", 13)).grid(row=2, column=0, padx=5, pady=20)
@@ -57,7 +60,8 @@ def update_form_design():
           bg="#0B314B", fg="#F4F7F9", font=("Batang", 13)).grid(row=4, column=0, padx=5, pady=20)
     Entry(new_window, bd=2, font=("Batang", 13)).grid(row = 4, column=1)
     # Button to update data
-    Button(new_window, text="Update", bg="#0D5F58", fg="#FEFEFE", font=("Batang", 13), width=10).grid(row=5, column=1, padx=5, pady=20)
+    Button(new_window, text="Update", bg="#0D5F58", fg="#FEFEFE", 
+           font=("Batang", 13), width=10, command=update).grid(row=5, column=1, padx=5, pady=20)
 
 def delete_form_design():
     new_window = Toplevel()
@@ -71,4 +75,5 @@ def delete_form_design():
           bg="#0B314B", fg="#F4F7F9", font=("Batang", 13)).grid(row=1, column=0, padx=5, pady=20)
     Entry(new_window, bd=2, font=("Batang", 13)).grid(row = 1, column=1)
     # Button to delete data
-    Button(new_window, text="Delete", bg="#0D5F58", fg="#FEFEFE", font=("Batang", 13), width=10).grid(row=1, column=2, padx=5, pady=20)
+    Button(new_window, text="Delete", bg="#0D5F58", fg="#FEFEFE", 
+           font=("Batang", 13), width=10, command=delete).grid(row=1, column=2, padx=5, pady=20)
