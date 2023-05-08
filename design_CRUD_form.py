@@ -24,7 +24,6 @@ def create_form_design():
     Label(new_window, text="Age:", anchor="w", 
           bg="#0B314B", fg="#F4F7F9", font=("Batang", 13)).grid(row=3, column=0, padx=5, pady=20)
     Entry(new_window, bd=2, font=("Batang", 13), textvariable=age_entry).grid(row = 3, column=1)
-
     # define function to handle button click
     def handle_submit():
         name = name_entry.get()
@@ -79,12 +78,17 @@ def delete_form_design():
     new_window.geometry("500x200")
     new_window.title("Delete")
     new_window.configure(bg="#0B314B")
+    name_entry = StringVar()
     Label(new_window, text="Delete operation:",anchor="n", 
           bg="#0B314B", fg="#F4F7F9", font=("Batang", 15)).grid(row = 0, column=1, padx=20, pady=20)
     # Label and entry widget where the user can input their name which they want to delete
     Label(new_window, text="Name which you \nwant to delete:", anchor="w", 
           bg="#0B314B", fg="#F4F7F9", font=("Batang", 13)).grid(row=1, column=0, padx=5, pady=20)
-    Entry(new_window, bd=2, font=("Batang", 13)).grid(row = 1, column=1)
+    Entry(new_window, bd=2, font=("Batang", 13), textvariable=name_entry).grid(row = 1, column=1)
+    # define function to handle button click
+    def handle_delete():
+        name = name_entry.get()
+        delete(name)
     # Button to delete data
     Button(new_window, text="Delete", bg="#0D5F58", fg="#FEFEFE", 
-           font=("Batang", 13), width=10, command=delete).grid(row=1, column=2, padx=5, pady=20)
+           font=("Batang", 13), width=10, command=handle_delete).grid(row=1, column=2, padx=5, pady=20)
