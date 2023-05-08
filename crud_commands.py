@@ -34,3 +34,6 @@ def update(name, new_name, new_last_name, new_age):
 def delete(name):
     collection.delete_one({"name": name})
     print("Deleted")
+
+def all_data_from_data_base():
+    return collection.find({})
