@@ -17,11 +17,18 @@ def submit(name, last_name, age):
     collection.insert_one(record)
     print("Created")
 
-
-def search():
+def search(name):
+    data = collection.find_one({"name": name})
     print("Search")
+    return [data["name"], data["last_name"], data["age"]]
 
-def update():
+def update(name, new_name, new_last_name, new_age):
+    collection.update_one(
+        {"name": name},
+        {"$set": {"name": new_name,
+                "last_name": new_last_name,
+                "age": new_age}}
+    )
     print("Update")
 
 def delete(name):
